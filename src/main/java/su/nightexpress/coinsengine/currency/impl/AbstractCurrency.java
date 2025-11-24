@@ -39,6 +39,7 @@ public abstract class AbstractCurrency implements Currency, ConfigBacked {
     protected final Map<String, Double> exchangeRates;
 
     protected String    name;
+    protected String    color;
     protected String    symbol;
     protected String    prefix;
     protected String[]  commandAliases;
@@ -395,7 +396,18 @@ public abstract class AbstractCurrency implements Currency, ConfigBacked {
     public void setSymbol(@NotNull String symbol) {
         this.symbol = symbol;
     }
+    
+    @NotNull
+    @Override
+    public String getColor() {
+        return this.symbol;
+    }
 
+    @Override
+    public void setColor(@NotNull String color) {
+        this.color = color;
+    }
+    
     @NotNull
     @Override
     public String getFormat() {
