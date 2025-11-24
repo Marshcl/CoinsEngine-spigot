@@ -72,6 +72,7 @@ public class PluginCommands extends SimpleManager<CoinsEnginePlugin> {
                 .description(Lang.COMMAND_CREATE_DESC)
                 .withArguments(
                     Arguments.string(CommandArguments.NAME).localized(CoreLang.COMMAND_ARGUMENT_NAME_NAME),
+                    Arguments.string(CommandArguments.COLOR).localized(Lang.COMMAND_ARGUMENT_NAME_COLOR),
                     Arguments.string(CommandArguments.SYMBOL).localized(Lang.COMMAND_ARGUMENT_NAME_SYMBOL),
                     Arguments.bool(CommandArguments.DECIMALS).localized(Lang.COMMAND_ARGUMENT_NAME_DECIMAL).optional().suggestions((reader, context) -> Lists.newList("true", "false"))
                 )
