@@ -15,6 +15,7 @@ public class Lang implements LangContainer {
     public static final TextLocale COMMAND_ARGUMENT_NAME_CURRENCY = LangEntry.builder("Command.Argument.Name.Currency").text("currency");
     public static final TextLocale COMMAND_ARGUMENT_NAME_PAGE     = LangEntry.builder("Command.Argument.Name.Page").text("page");
     public static final TextLocale COMMAND_ARGUMENT_NAME_PLUGIN   = LangEntry.builder("Command.Argument.Name.Plugin").text("plugin");
+    public static final TextLocale COMMAND_ARGUMENT_NAME_COLOR   = LangEntry.builder("Command.Argument.Name.Color").text("color");
     public static final TextLocale COMMAND_ARGUMENT_NAME_SYMBOL   = LangEntry.builder("Command.Argument.Name.Symbol").text("symbol");
     public static final TextLocale COMMAND_ARGUMENT_NAME_DECIMAL  = LangEntry.builder("Command.Argument.Name.Decimals").text("allowDecimals");
 
