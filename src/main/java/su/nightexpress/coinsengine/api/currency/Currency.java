@@ -88,7 +88,11 @@ public interface Currency {
     @NotNull String getSymbol();
 
     void setSymbol(@NotNull String symbol);
+    
+    @NotNull String getColor();
 
+    void setColor(@NotNull String symbol);
+    
     @NotNull String getFormat();
 
     void setFormat(@NotNull String format);
