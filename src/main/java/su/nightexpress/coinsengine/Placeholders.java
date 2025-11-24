@@ -33,6 +33,7 @@ public class Placeholders extends su.nightexpress.nightcore.util.Placeholders {
 
     public static final String CURRENCY_ID     = "%currency_id%";
     public static final String CURRENCY_NAME   = "%currency_name%";
+    public static final String CURRENCY_COLOR = "%currency_color%";
     public static final String CURRENCY_SYMBOL = "%currency_symbol%";
     public static final String CURRENCY_PREFIX = "%currency_prefix%";
     public static final String CURRENCY_LABEL  = "%currency_label%";
@@ -41,6 +42,7 @@ public class Placeholders extends su.nightexpress.nightcore.util.Placeholders {
         .add(CURRENCY_ID, Currency::getId)
         .add(CURRENCY_NAME, Currency::getName)
         .add(CURRENCY_PREFIX, Currency::getPrefix)
+        .add(CURRENCY_COLOR, Currency::getColor)
         .add(CURRENCY_SYMBOL, Currency::getSymbol)
         .add(CURRENCY_LABEL, currency -> currency.getCommandAliases()[0])
     );
