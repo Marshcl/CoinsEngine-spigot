@@ -69,6 +69,7 @@ public abstract class AbstractCurrency implements Currency, ConfigBacked {
         this.exchangeRates = new HashMap<>();
 
         this.setName(StringUtil.capitalizeUnderscored(id));
+        this.setColor("");
         this.setSymbol("");
         this.setPrefix(this.name);
         this.setCommandAliases(new String[]{id});
@@ -103,6 +104,11 @@ public abstract class AbstractCurrency implements Currency, ConfigBacked {
             Placeholders.URL_WIKI_TEXT
         ).read(config));
 
+        this.setSymbol(ConfigValue.create("Color", this.name,
+            "Currency color.",
+            Placeholders.URL_WIKI_TEXT
+        ).read(config));
+        
         this.setSymbol(ConfigValue.create("Symbol", this.name,
             "Currency symbol.",
             Placeholders.URL_WIKI_TEXT
@@ -215,6 +221,7 @@ public abstract class AbstractCurrency implements Currency, ConfigBacked {
 
     private void write(@NotNull FileConfig config) {
         config.set("Name", this.name);
+        config.set("Color", this.color);
         config.set("Symbol", this.symbol);
         config.set("Prefix", this.prefix);
         config.set("Command_Aliases", String.join(",", Arrays.asList(this.commandAliases)));
@@ -400,7 +407,7 @@ public abstract class AbstractCurrency implements Currency, ConfigBacked {
     @NotNull
     @Override
     public String getColor() {
-        return this.symbol;
+        return this.color;
     }
 
     @Override
