@@ -17,6 +17,7 @@ public class CommandArguments {
     public static final String AMOUNT   = "amount";
     public static final String CURRENCY = "currency";
     public static final String NAME     = "name";
+    public static final String COLOR    = "color";
     public static final String SYMBOL   = "symbol";
     public static final String DECIMALS = "decimals";
 
