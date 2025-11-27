@@ -124,7 +124,7 @@ public class PluginCommands extends SimpleManager<CoinsEnginePlugin> {
         String symbol = arguments.getString(CommandArguments.SYMBOL);
         boolean decimals = arguments.getBoolean(CommandArguments.DECIMALS, true);
 
-        return this.currencyManager.createCurrency(context.getSender(), name, symbol, decimals);
+        return this.currencyManager.createCurrency(context.getSender(), name, color, symbol, decimals);
     }
 
     private boolean showWallet(@NotNull CommandContext context, @NotNull ParsedArguments arguments) {
