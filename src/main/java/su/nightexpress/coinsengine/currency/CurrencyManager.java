@@ -236,7 +236,7 @@ public class CurrencyManager extends AbstractManager<CoinsEnginePlugin> {
         return currency;
     }
 
-    public boolean createCurrency(@NotNull CommandSender sender, @NotNull String name, @NotNull String symbol, boolean decimals) {
+    public boolean createCurrency(@NotNull CommandSender sender, @NotNull String name, @NotNull String color, @NotNull String symbol, boolean decimals) {
         String id = Strings.varStyle(name).orElse(null);
         if (id == null) {
             Lang.CURRENCY_CREATE_BAD_NAME.message().send(sender);
@@ -250,6 +250,7 @@ public class CurrencyManager extends AbstractManager<CoinsEnginePlugin> {
 
         NormalCurrency created = this.createCurrency(id, currency -> {
             currency.setSymbol(symbol);
+            currency.setColor(color);
             currency.setDecimal(decimals);
         });
 
