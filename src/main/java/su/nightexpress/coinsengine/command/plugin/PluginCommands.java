@@ -120,6 +120,7 @@ public class PluginCommands extends SimpleManager<CoinsEnginePlugin> {
 
     private boolean createCurrency(@NotNull CommandContext context, @NotNull ParsedArguments arguments) {
         String name = arguments.getString(CommandArguments.NAME);
+        String color = arguments.getString(CommandArguments.COLOR);
         String symbol = arguments.getString(CommandArguments.SYMBOL);
         boolean decimals = arguments.getBoolean(CommandArguments.DECIMALS, true);
 
