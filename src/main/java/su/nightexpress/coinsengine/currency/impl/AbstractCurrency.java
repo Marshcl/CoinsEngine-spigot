@@ -133,7 +133,7 @@ public abstract class AbstractCurrency implements Currency, ConfigBacked {
         ).read(config));
 
         this.setFormat(ConfigValue.create("Format",
-            Placeholders.GENERIC_AMOUNT + Placeholders.CURRENCY_SYMBOL,
+            Placeholders.CURRENCY_COLOR + Placeholders.GENERIC_AMOUNT + Placeholders.CURRENCY_SYMBOL,
             "Currency display format.",
             "Placeholders:",
             "- " + Placeholders.GENERIC_AMOUNT + " - Amount value.",
@@ -143,7 +143,7 @@ public abstract class AbstractCurrency implements Currency, ConfigBacked {
         ).read(config));
 
         this.setFormatShort(ConfigValue.create("Format_Short",
-            Placeholders.CURRENCY_SYMBOL + Placeholders.GENERIC_AMOUNT,
+            Placeholders.CURRENCY_SYMBOL + Placeholders.CURRENCY_COLOR +  Placeholders.GENERIC_AMOUNT,
             "Currency short display format.",
             "- " + Placeholders.GENERIC_AMOUNT + " - Amount value.",
             "- Currency placeholders: " + Placeholders.WIKI_PLACEHOLDERS,
