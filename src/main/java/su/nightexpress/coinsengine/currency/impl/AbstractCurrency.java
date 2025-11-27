@@ -104,7 +104,7 @@ public abstract class AbstractCurrency implements Currency, ConfigBacked {
             Placeholders.URL_WIKI_TEXT
         ).read(config));
 
-        this.setSymbol(ConfigValue.create("Color", this.name,
+        this.setColor(ConfigValue.create("Color", this.name,
             "Currency color.",
             Placeholders.URL_WIKI_TEXT
         ).read(config));
