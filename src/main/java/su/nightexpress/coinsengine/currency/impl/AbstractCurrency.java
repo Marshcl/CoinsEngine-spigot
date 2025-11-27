@@ -73,8 +73,8 @@ public abstract class AbstractCurrency implements Currency, ConfigBacked {
         this.setSymbol("");
         this.setPrefix(this.name);
         this.setCommandAliases(new String[]{id});
-        this.setFormat(Placeholders.GENERIC_AMOUNT + Placeholders.CURRENCY_SYMBOL);
-        this.setFormatShort(Placeholders.GENERIC_AMOUNT + Placeholders.CURRENCY_SYMBOL);
+        this.setFormat(Placeholders.CURRENCY_COLOR + Placeholders.GENERIC_AMOUNT + Placeholders.CURRENCY_SYMBOL);
+        this.setFormatShort(Placeholders.CURRENCY_COLOR + Placeholders.GENERIC_AMOUNT + Placeholders.CURRENCY_SYMBOL);
         this.setIcon(NightItem.fromType(Material.EMERALD));
         this.dataColumn = id;
         this.dataSync = false;
