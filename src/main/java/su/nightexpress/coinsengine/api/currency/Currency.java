@@ -91,7 +91,7 @@ public interface Currency {
     
     @NotNull String getColor();
 
-    void setColor(@NotNull String symbol);
+    void setColor(@NotNull String color);
     
     @NotNull String getFormat();
 
